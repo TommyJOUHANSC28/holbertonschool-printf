@@ -1,57 +1,48 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
-#include <stdarg.h>
+#ifndef MAIN_H
+#define MAIN_H
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdarg.h>
 /**
-* struct print - struct for printer functions
-* @type_arg: identifier
-* @f: pointer to a printer functions
-*
-* Description: struct that stores pointers to a
-* printer functions.
-*/
-typedef struct print
+ * struct convert - defines a structure for symbols and functions
+ *
+ * @symcro: The operator
+ * @f: The function associated
+ */
+struct convert
 {
-char *type_arg;
-int (*f)(va_list, char *, unsigned int);
-} print_t;
+	char *symcro;
+	int (*f)(va_list);
+};
+typedef struct convert conver_t;
+/**
+* Reports an error during recording.
+* This function formats and logs an error message related to recording.
+* @format: A printf-style format string describing the error message.
+* @f_list: A list of format arguments for the error message.
+* @arg_list: Additional arguments used for formatting.
+* Returns: a non-zero value if an error occurred, 0 otherwise.
+*/
+int recording_error(const char *format, conver_t f_list[], va_list arg_list);
 int _printf(const char *format, ...);
-int print_prg(va_list __attribute__((unused)), char *, unsigned int);
-int print_chr(va_list arguments, char *buf, unsigned int ibuf);
-int print_str(va_list arguments, char *buf, unsigned int ibuf);
-int print_int(va_list arguments, char *buf, unsigned int ibuf);
-int print_bnr(va_list arguments, char *buf, unsigned int ibuf);
-int print_unt(va_list arguments, char *buf, unsigned int ibuf);
-int print_oct(va_list arguments, char *buf, unsigned int ibuf);
-int print_hex(va_list arguments, char *buf, unsigned int ibuf);
-int print_upx(va_list arguments, char *buf, unsigned int ibuf);
-int print_usr(va_list arguments, char *buf, unsigned int ibuf);
-int print_add(va_list arguments, char *buf, unsigned int ibuf);
-int print_rev(va_list arguments, char *buf, unsigned int ibuf);
-int print_rot(va_list arguments, char *buf, unsigned int ibuf);
-int prinlint(va_list arguments, char *buf, unsigned int ibuf);
-int prinlunt(va_list arguments, char *buf, unsigned int ibuf);
-int prinloct(va_list arguments, char *buf, unsigned int ibuf);
-int prinlhex(va_list arguments, char *buf, unsigned int ibuf);
-int prinlupx(va_list arguments, char *buf, unsigned int ibuf);
-int prinhint(va_list arguments, char *buf, unsigned int ibuf);
-int prinhunt(va_list arguments, char *buf, unsigned int ibuf);
-int prinhoct(va_list arguments, char *buf, unsigned int ibuf);
-int prinhhex(va_list arguments, char *buf, unsigned int ibuf);
-int prinhupx(va_list arguments, char *buf, unsigned int ibuf);
-int prinpint(va_list arguments, char *buf, unsigned int ibuf);
-int prinnoct(va_list arguments, char *buf, unsigned int ibuf);
-int prinnhex(va_list arguments, char *buf, unsigned int ibuf);
-int prinnupx(va_list arguments, char *buf, unsigned int ibuf);
-int prinsint(va_list arguments, char *buf, unsigned int ibuf);
-int (*get_print_func(const char *s, int index))(va_list, char *, unsigned int);
-int ev_print_func(const char *s, int index);
-unsigned int handl_buf(char *buf, char c, unsigned int ibuf);
-int print_buf(char *buf, unsigned int nbuf);
-char *fill_binary_array(char *binary, long int int_in, int isneg, int limit);
-char *fill_oct_array(char *bnr, char *oct);
-char *fill_long_oct_array(char *bnr, char *oct);
-char *fill_short_oct_array(char *bnr, char *oct);
-char *fill_hex_array(char *bnr, char *hex, int isupp, int limit);
+int _write_char(char);
+int print_char(va_list);
+int print_string(va_list);
+int print_percent(va_list);
+int print_integer(va_list);
+int print_number(va_list);
+int print_binary(va_list);
+int unsigned_integer(va_list);
+int print_unsgned_number(unsigned int);
+int print_reversed(va_list);
+/**
+* Computes the length of a number in base 10.
+* Determines how many digits are required to represent the integer.
+* @n: The integer whose length is to be calculated.
+* Return int The number of digits in the integer.
+*/
+unsigned int base_len(unsigned int, int);
+char *rev_string(char *);
+void write_base(char *str);
+char *_memcpy(char *dest, char *src, unsigned int n);
 #endif
