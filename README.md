@@ -22,3 +22,11 @@ This project aims to understand and illustrate the inner workings of the printf 
 The flowchart provides a structured illustration of the function's internal workings in C, showing how it begins by sending data to standard output (STDOUT), then prints each normal character of the string passed as an argument while counting the number of characters printed. When a symbol is encountered, it enters conditional logic that identifies the type of specifier (for integers, characters, strings, or the symbol itself), processes the corresponding value, prints it correctly, increments the counter, and finally returns the total number of characters printed. This allows the function to provide accurate feedback on the print operation performed.
 
 ![_printf](https://github.com/TommyJOUHANSC28/holbertonschool-printf/blob/tommy/printf-flowchart.png?raw=true)
+
+For description of flowchart :
+- Print the buffer contents
+- Free the memory
+- End the argument list
+- Return the number of characters
+
+![_printf](https://github.com/TommyJOUHANSC28/holbertonschool-printf/blob/tommy/flowchart-printf-2.png?raw=true)
