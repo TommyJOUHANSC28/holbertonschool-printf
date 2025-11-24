@@ -11,10 +11,14 @@ that map to the other arguments of printf().
 
 The prototype of this function is: int _printf(const char format, ...);
 
-This means that it has one mandatory format argument, and an extra number of arguments that can be none, or many.
-
-Format of the format string
-
-The format string is a character string starting and ending with double quotes. The format string is composed of zero or more directives; ordinary characters (not %), and conversion specifications, each of which results in fetching zero or more subsequent arguments.
+This project aims to understand and illustrate the inner workings of the printf function in C, explaining how it displays text and handles different format specifiers such as %%, %s, %d, and %c; while also counting the total number of characters displayed.
 
 
+
+
+
+## **Flowchart**
+
+The flowchart provides a structured illustration of the function's internal workings in C, showing how it begins by sending data to standard output (STDOUT), then prints each normal character of the string passed as an argument while counting the number of characters printed. When a symbol is encountered, it enters conditional logic that identifies the type of specifier (for integers, characters, strings, or the symbol itself), processes the corresponding value, prints it correctly, increments the counter, and finally returns the total number of characters printed. This allows the function to provide accurate feedback on the print operation performed.
+
+![_printf](https://github.com/TommyJOUHANSC28/holbertonschool-printf/blob/tommy/printf-flowchart.png?raw=true)
