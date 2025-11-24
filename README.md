@@ -14,6 +14,25 @@ The prototype of this function is: int _printf(const char format, ...);
 This project aims to understand and illustrate the inner workings of the printf function in C, explaining how it displays text and handles different format specifiers such as %%, %s, %d, and %c; while also counting the total number of characters displayed.
 
 
+--- # **Compilation:**
+
+When you are done creating you *main.c* file  you will need to compile it. You can use any compiler software you like, although this project was tested in GNU GCC 5.5.0 with different error flags such as:
+
+> **-Wall:** Enables all the warnings about constructions.
+>
+> **-Wextra :** Enables some extra warning flags that are not enabled by **-Wall**.
+>
+> **-Werror:** Make all warnings into hard errors.
+>
+> **-pedantic:** Issue all the mandatory diagnostics listed in the C standard.
+>
+> **-Wno-format:** Disables warnings about printf format (so that you can try any type of format you want) in equivalence to a custom made variadic function.
+
+    root@f52c0d026c3049d68081893eaf522e3b-2377118072:~/holbertonschool-printf# gcc -Wall -Wextra -Werror -pedantic -Wno-format *.c
+
+# **Execution:**
+
+   root@f52c0d026c3049d68081893eaf522e3b-2377118072:~/holbertonschool-printf# ./a.out
 
 
 
@@ -30,3 +49,14 @@ For description of flowchart :
 - Return the number of characters
 
 ![_printf](https://github.com/TommyJOUHANSC28/holbertonschool-printf/blob/tommy/flowchart-printf-2.png?raw=true)
+
+
+Here is a diagram of the general behaviour of the _printf.
+
+The most important functions are presented:
+
+![_printf](https://github.com/TommyJOUHANSC28/holbertonschool-printf/blob/tommy/flowchart-3-printf-all-functions.png?raw=true)
+
+## Authors
+Tommy JOUHANS (https://github.com/TommyJOUHANSC28)
+Maxence HENOUS
