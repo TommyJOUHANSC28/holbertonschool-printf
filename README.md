@@ -10,9 +10,13 @@ that map to the other arguments of printf().
 
 
 The prototype of this function is: int _printf(const char format, ...);
-
-This project aims to understand and illustrate the inner workings of the printf function in C, explaining how it displays text and handles different format specifiers such as %%, %s, %d, and %c; while also counting the total number of characters displayed.
-
+This project is a very simple explanation of how the _printf function works:
+We check if the text to be displayed (format) is empty.
+If so, we stop everything and return -1
+We prepare the list of functions that can display each data type (%d, %s, %c, etc.).
+We retrieve the arguments that the user provided after the format (using va_list).
+We call a function (recording_error) that reads the format, finds the correct % symbols, and uses the appropriate function to display each value.
+We exit cleanly and return the total number of characters displayed.
 
 --- # **Compilation:**
 
@@ -32,8 +36,35 @@ When you are done creating you *main.c* file  you will need to compile it. You c
 
 # **Execution:**
 
-   root@f52c0d026c3049d68081893eaf522e3b-2377118072:~/holbertonschool-printf# ./a.out
-
+root@f52c0d026c3049d68081893eaf522e3b-2377118072:~/holbertonschool-printf# ./a.out
+Let's try to printf a simple sentence.
+Let's try to printf a simple sentence.
+Length:[39, 39]
+Length:[39, 39]
+Negative:[-762534]
+Negative:[-762534]
+Unsigned:[2147484671]
+Unsigned:[2147484671]
+Unsigned octal:[%o]
+Unsigned octal:[20000001777]
+Unsigned hexadecimal:[%x, %X]
+Unsigned hexadecimal:[800003ff, 800003FF]
+Character:[H]
+Character:[H]
+String:[I am a string !]
+String:[I am a string !]
+Address:[%p]
+Address:[0x7ffe637541f0]
+Percent:[%]
+Percent:[%]
+Len:[12]
+Len:[12]
+Unknown:[
+]FF300008 ,ff300
+]0f145736eff
+]%
+]21[:neL]
+Unknown:[%r]
 
 
 ## **Flowchart**
@@ -42,20 +73,7 @@ The flowchart provides a structured illustration of the function's internal work
 
 ![_printf](https://github.com/TommyJOUHANSC28/holbertonschool-printf/blob/tommy/printf-flowchart.png?raw=true)
 
-For description of flowchart :
-- Print the buffer contents
-- Free the memory
-- End the argument list
-- Return the number of characters
 
-![_printf](https://github.com/TommyJOUHANSC28/holbertonschool-printf/blob/tommy/flowchart-printf-2.png?raw=true)
-
-
-Here is a diagram of the general behaviour of the _printf.
-
-The most important functions are presented:
-
-![_printf](https://github.com/TommyJOUHANSC28/holbertonschool-printf/blob/tommy/flowchart-3-printf-all-functions.png?raw=true)
 
 ## Authors
 Tommy JOUHANS (https://github.com/TommyJOUHANSC28)
