@@ -1,6 +1,4 @@
-.TH _printf "November, 27th 2025" "man page of _printf.c function"
-.SH _PRINTF()
-
+.TH PRINTF
 .SH NAME
 .B _printf - function that produces output according to a format
 
@@ -49,16 +47,6 @@ A hand to display the numbers (integers):
 .IP
 #include "main.h"
 .IP
-/**
-.IP
- * main - Entry point
-.IP 
- *
-.IP
- * Return: Always 0
-.IP
- */
-.IP
 int main(void)
 .IP
 {
@@ -68,6 +56,8 @@ _printf("Length:[%d, %i]\n", len, len);
 }
 .br
 .IP
+root@f52c0d026c3049d68081893eaf522e3b-2377118072:~/holbertonschool-printf# gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c
+.IP
 root@f52c0d026c3049d68081893eaf522e3b-2377118072:~/holbertonschool-printf# ./a.out
 .IP
 Length:[39, 39]
@@ -75,6 +65,10 @@ Length:[39, 39]
 
 .SH BUGS
 No detected so far. Please report any to 12119@holbertonstudents.com
+.IP
+.SH DATE
+November, 27th 2025
+.br
 
 .SH AUTHOR
 .IP
