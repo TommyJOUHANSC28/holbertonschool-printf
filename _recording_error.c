@@ -1,5 +1,14 @@
 #include "main.h"
-
+#define BUFFER_SIZE 1024
+/** buffer_flush - clears the buffer to stdout
+* @buffer: pointer to the buffer
+* @len: number of characters to write
+* Return: number of characters written
+*/
+static int buffer_flush(char *buffer, int len)
+{
+return write(1, buffer, len);
+}
 /**
  * recording_error - Receives the main string and all the necessary parameters
  * to print a formated string.
@@ -10,10 +19,17 @@
  */
 int recording_error(const char *format, conver_t f_list[], va_list arg_list)
 {
-int i, j, rev_val, print_all;
-print_all = 0;
+char buffer[BUFFER_SIZE];
+int i, j, rev_val, print_all, buf_index;
+print_all = 0, buf_index = 0;
 for (i = 0; format[i] != '\0'; i++)
 {
+buffer[buf_index++] = format[i];
+if (buf_index == BUFFER_SIZE)
+{
+print_all += buffer_flush(buffer, buf_index);
+buf_index = 0;
+}
 if (format[i] == '%')
 {
 for (j = 0; f_list[j].symcro != NULL; j++)
@@ -45,5 +61,7 @@ _write_char(format[i]);
 print_all++;
 }
 }
+if (buf_index > 0)
+print_all += buffer_flush(buffer, buf_index);
 return (print_all);
 }
