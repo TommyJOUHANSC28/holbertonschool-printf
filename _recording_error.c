@@ -18,7 +18,7 @@ if (format[i] == '%')
 {
 for (j = 0; f_list[j].symcro != NULL; j++)
 {
-if (format[i + 1] == f_list[j].symcro[0])
+if (format[i] == f_list[j].symcro[0])
 {
 rev_val = f_list[j].f(arg_list);
 if (rev_val == -1)
@@ -27,12 +27,11 @@ print_all += rev_val;
 break;
 }
 }
-if (f_list[j].symcro == NULL && format[i + 1] != ' ')
+if (f_list[j].symcro == NULL && format[i] != ' ')
 {
-if (format[i + 1] != '\0')
+if (format[i] != '\0')
 {
 _write_char(format[i]);
-_write_char(format[i + 1]);
 print_all = print_all + 2;
 }
 else
