@@ -20,7 +20,7 @@ We exit cleanly and return the total number of characters displayed.
 
 --- # **Compilation:**
 
-When you are done creating you *main.c* file  you will need to compile it. You can use any compiler software you like, although this project was tested in GNU GCC 5.5.0 with different error flags such as:
+When you are done creating you *main.c* file  you will need to compile it. You can use any compiler software you like, although this project was tested in gcc (Ubuntu 11.4.0-1ubuntu1~22.04.2) 11.4.0 with different error flags such as:
 
 > **-Wall:** Enables all the warnings about constructions.
 >
