@@ -3,14 +3,16 @@
 .B _printf - function that produces output according to a format
 
 .SH SYNOPSIS
+
 .B #include "main.h"
 .br
 .B int _printf(const char *format, ...);
 
 .SH DESCRIPTION
 
-- _printf() function produces output according to the format. It uses a specific function according to receipt format in order to display the result in the correct format.
-
+- _printf() function produces output according to the format. 
+It uses a specific function according to receipt format in order to display the result in the correct format.
+It writes the output to the standard output (stdout).
 The available convertion specifiers are:
 
 .br
@@ -32,9 +34,15 @@ The available convertion specifiers are:
 %r: Prints a reversed string
 .br
 %R: Prints the Rot13 interpretation of a string
+%%: Print a percent sign
+
+.SH LIMITATIONS
+The function does not handle flags, field width, precision,
+length modifiers or buffer handling.
 
 .SH RETURN
-If successful, these functions return the number of characters printed (excluding the null byte).If the null return is unsuccessful, -1 is returned.
+If successful, these functions return the number of characters printed (excluding the null byte).
+If the null return is unsuccessful, -1 is returned.
 
 
 .SH EXAMPLE
@@ -76,3 +84,5 @@ Tommy JOUHANS(github: TommyJOUHANSC28), Holberton School from Dijon, in FRANCE.
 .IP
 Maxence HENOUS Holberton School from Dijon, in FRANCE.
 .br
+.SH SEE ALSO
+print(3)
