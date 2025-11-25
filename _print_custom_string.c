@@ -15,7 +15,7 @@ s = "(null)";
 while (*s)
 {
 unsigned char c = (unsigned char)*s;
-if (c >= 32 && c < 127) /* imprimable */
+if (c >= 32 && c < 127)
 {
 count += write(1, &c, 1);
 }
