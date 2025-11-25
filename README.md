@@ -39,33 +39,69 @@ root@f52c0d026c3049d68081893eaf522e3b-2377118072:~/holbertonschool-printf# gcc -
 root@f52c0d026c3049d68081893eaf522e3b-2377118072:~/holbertonschool-printf# ./a.out
 Let's try to printf a simple sentence.
 Let's try to printf a simple sentence.
+Length:[%, %]
 Length:[39, 39]
-Length:[39, 39]
+Negative:[%]
 Negative:[-762534]
-Negative:[-762534]
+Unsigned:[%]
 Unsigned:[2147484671]
-Unsigned:[2147484671]
-Unsigned octal:[%o]
+Unsigned octal:[%]
 Unsigned octal:[20000001777]
-Unsigned hexadecimal:[%x, %X]
+Unsigned hexadecimal:[%, %]
 Unsigned hexadecimal:[800003ff, 800003FF]
+Character:[%]
 Character:[H]
-Character:[H]
+String:[%]
 String:[I am a string !]
-String:[I am a string !]
-Address:[%p]
+Address:[%]
 Address:[0x7ffe637541f0]
 Percent:[%]
 Percent:[%]
+Len:[%]
 Len:[12]
-Len:[12]
-Unknown:[
-]FF300008 ,ff300
-]0f145736eff
-]%
-]21[:neL]
+Unknown:[%]
 Unknown:[%r]
 
+Checking for memory leaks using "Valgrind":
+root@ca323180001b463890b5e1f9a308b328-2377118072:~/holbertonschool-printf# valgrind ./a.out
+==5334== Memcheck, a memory error detector
+==5334== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==5334== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==5334== Command: ./a.out
+==5334== 
+Let's try to printf a simple sentence.
+Let's try to printf a simple sentence.
+Length:[%, %]
+Length:[39, 39]
+Negative:[%]
+Negative:[-762534]
+Unsigned:[%]
+Unsigned:[2147484671]
+Unsigned octal:[%]
+Unsigned octal:[20000001777]
+Unsigned hexadecimal:[%, %]
+Unsigned hexadecimal:[800003ff, 800003FF]
+Character:[%]
+Character:[H]
+String:[%]
+String:[I am a string !]
+Address:[%]
+Address:[0x7ffe637541f0]
+Percent:[%]
+Percent:[%]
+Len:[%]
+Len:[12]
+Unknown:[%]
+Unknown:[%r]
+==5334== 
+==5334== HEAP SUMMARY:
+==5334==     in use at exit: 0 bytes in 0 blocks
+==5334==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==5334== 
+==5334== All heap blocks were freed -- no leaks are possible
+==5334== 
+==5334== For lists of detected and suppressed errors, rerun with: -s
+==5334== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 ## **Flowchart**
 
