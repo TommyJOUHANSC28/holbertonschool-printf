@@ -11,8 +11,8 @@
  */
 struct convert
 {
-	char *symcro;
-	int (*f)(va_list);
+char *symcro;
+int (*f)(va_list);
 };
 typedef struct convert conver_t;
 /**
