@@ -36,7 +36,6 @@ int print_binary(va_list);
 int unsigned_integer(va_list);
 int print_unsgned_number(unsigned int);
 int print_reversed(va_list);
-int print_custom_string(va_list arg_list);
 /**
 * Computes the length of a number in base 10.
 * Determines how many digits are required to represent the integer.
