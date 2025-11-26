@@ -31,7 +31,7 @@ root@fac51f92ef2044bfb9ecaace5e1f2ecf-2377118072:~/holbertonschool-printf# gcc -
 
 # ** MAN_PAGE **
 
-LANG=C man ./printf | col -b > docs/print.man.txt
+![man-printf](printf)
 
 
 # **Execution:**
