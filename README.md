@@ -17,6 +17,8 @@ We exit cleanly and return the total number of characters displayed.
 _printf.c:
 ![_printf](https://github.com/TommyJOUHANSC28/holbertonschool-printf/blob/main/printf.c.png?raw=true)
 
+_printf.c:
+![_printf](https://github.com/TommyJOUHANSC28/holbertonschool-printf/blob/main/recording-error.png?raw=true)
 
 
 --- # **Compilation:**
