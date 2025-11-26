@@ -1,14 +1,10 @@
 # Holbertonschool : Printf by Tommy JOUHANS and Maxence HENOUS
 
-This a repository for the Holberton School team project for the printf.
+This repository contains the data for the team project by Tommy Jouhans and Maxence Henous at Holberton School in Dijon concerning the `printf` function.
 
-The printf() function prints output to stdout, according to format and other arguments passed to printf(). 
-The string format consists of two types of items - characters that will be printed to the screen,
-and format commands that define how the other arguments to printf() are displayed. Basically,
-you specify a format string that has text in it, as well as "special" characters
-that map to the other arguments of printf().
+The `printf()` function displays the result on standard output (stdout), based on the format and other arguments passed to it.
 
-
+The format consists of two types of elements: the characters to be displayed on the screen,
 The prototype of this function is: int _printf(const char format, ...);
 This project is a very simple explanation of how the _printf function works:
 We check if the text to be displayed (format) is empty.
@@ -35,31 +31,33 @@ When you are done creating you *main.c* file  you will need to compile it. You c
 root@f52c0d026c3049d68081893eaf522e3b-2377118072:~/holbertonschool-printf# gcc -Wall -Wextra -Werror -pedantic -Wno-format *.c
 
 # **Execution:**
+For a week we tried to solve the advanced tasks; it was obvious, we tried to display a small part of the... All the above options work well together. We were unable to solve the following functions to handle the following conversion specifiers:
+u, o, x, X, S, +, space, l, h, r, R and to use a local buffer of 1024 characters in order to call write as little as possible. The field width and precision for non-custom conversion specifiers, the 0 flag character for non-custom conversion specifiers, the - flag character.
 
 root@f52c0d026c3049d68081893eaf522e3b-2377118072:~/holbertonschool-printf# ./a.out
 Let's try to printf a simple sentence.
 Let's try to printf a simple sentence.
-Length:[%, %]
+Length:[%, %] // unresolved 
 Length:[39, 39]
-Negative:[%]
+Negative:[%] // unresolved 
 Negative:[-762534]
-Unsigned:[%]
+Unsigned:[%] // unresolved
 Unsigned:[2147484671]
-Unsigned octal:[%]
+Unsigned octal:[%] // unresolved
 Unsigned octal:[20000001777]
-Unsigned hexadecimal:[%, %]
+Unsigned hexadecimal:[%, %] // unresolved
 Unsigned hexadecimal:[800003ff, 800003FF]
-Character:[%]
+Character:[%] // unresolved
 Character:[H]
-String:[%]
+String:[%] // unresolved
 String:[I am a string !]
-Address:[%]
+Address:[%] // unresolved
 Address:[0x7ffe637541f0]
 Percent:[%]
 Percent:[%]
-Len:[%]
+Len:[%] // unresolved
 Len:[12]
-Unknown:[%]
+Unknown:[%] // unresolved
 Unknown:[%r]
 
 Checking for memory leaks using "Valgrind":
@@ -73,25 +71,25 @@ Let's try to printf a simple sentence.
 Let's try to printf a simple sentence.
 Length:[%, %]
 Length:[39, 39]
-Negative:[%]
+Negative:[%] // unresolved
 Negative:[-762534]
-Unsigned:[%]
+Unsigned:[%] // unresolved
 Unsigned:[2147484671]
-Unsigned octal:[%]
+Unsigned octal:[%] // unresolved
 Unsigned octal:[20000001777]
-Unsigned hexadecimal:[%, %]
+Unsigned hexadecimal:[%, %] // unresolved
 Unsigned hexadecimal:[800003ff, 800003FF]
-Character:[%]
+Character:[%] // unresolved
 Character:[H]
-String:[%]
+String:[%] // unresolved
 String:[I am a string !]
-Address:[%]
+Address:[%] // unresolved
 Address:[0x7ffe637541f0]
 Percent:[%]
-Percent:[%]
-Len:[%]
+Percent:[%] 
+Len:[%] // unresolved
 Len:[12]
-Unknown:[%]
+Unknown:[%] // unresolved
 Unknown:[%r]
 ==5334== 
 ==5334== HEAP SUMMARY:
@@ -114,3 +112,4 @@ The flowchart provides a structured illustration of the function's internal work
 ## Authors
 Tommy JOUHANS (https://github.com/TommyJOUHANSC28)
 Maxence HENOUS
+
