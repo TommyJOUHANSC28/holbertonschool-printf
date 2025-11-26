@@ -14,19 +14,14 @@ We retrieve the arguments that the user provided after the format (using va_list
 We call a function (recording_error) that reads the format, finds the correct % symbols, and uses the appropriate function to display each value.
 We exit cleanly and return the total number of characters displayed.
 
+_printf.c:
+![_printf](https://github.com/TommyJOUHANSC28/holbertonschool-printf/blob/main/printf.c.png?raw=true)
+
+
+
 --- # **Compilation:**
 
 When you are done creating you *main.c* file  you will need to compile it. You can use any compiler software you like, although this project was tested in gcc (Ubuntu 11.4.0-1ubuntu1~22.04.2) 11.4.0 with different error flags such as:
-
-> **-Wall:** Enables all the warnings about constructions.
->
-> **-Wextra :** Enables some extra warning flags that are not enabled by **-Wall**.
->
-> **-Werror:** Make all warnings into hard errors.
->
-> **-pedantic:** Issue all the mandatory diagnostics listed in the C standard.
->
-> **-Wno-format:** Disables warnings about printf format (so that you can try any type of format you want) in equivalence to a custom made variadic function.
 
 root@f52c0d026c3049d68081893eaf522e3b-2377118072:~/holbertonschool-printf# gcc -Wall -Wextra -Werror -pedantic -Wno-format *.c
 
