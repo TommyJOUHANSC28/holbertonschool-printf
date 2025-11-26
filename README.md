@@ -4,20 +4,22 @@ This repository contains the data for the team project by Tommy Jouhans and Maxe
 
 The `printf()` function displays the result on standard output (stdout), based on the format and other arguments passed to it.
 
+
+_printf.c:
 The format consists of two types of elements: the characters to be displayed on the screen,
 The prototype of this function is: int _printf(const char format, ...);
 This project is a very simple explanation of how the _printf function works:
 We check if the text to be displayed (format) is empty.
+
+![_printf](https://github.com/TommyJOUHANSC28/holbertonschool-printf/blob/main/printf.c.png?raw=true)
+
+_recording_error.c:
 If so, we stop everything and return -1
 We prepare the list of functions that can display each data type (%d, %s, %c, etc.).
 We retrieve the arguments that the user provided after the format (using va_list).
 We call a function (recording_error) that reads the format, finds the correct % symbols, and uses the appropriate function to display each value.
 We exit cleanly and return the total number of characters displayed.
 
-_printf.c:
-![_printf](https://github.com/TommyJOUHANSC28/holbertonschool-printf/blob/main/printf.c.png?raw=true)
-
-_printf.c:
 ![_printf](https://github.com/TommyJOUHANSC28/holbertonschool-printf/blob/main/recording-error.png?raw=true)
 
 
