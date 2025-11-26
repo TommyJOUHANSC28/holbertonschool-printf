@@ -47,7 +47,3 @@ char *rev_string(char *);
 void write_base(char *str);
 char *_memcpy(char *dest, char *src, unsigned int n);
 #endif
-int handle_unsigned(va_list args);
-int handle_octal(va_list args);
-int handle_hex(va_list args);
-int handle_HEX(va_list args);

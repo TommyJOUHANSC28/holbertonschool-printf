@@ -33,7 +33,6 @@ print_all = recording_error(format, f_list, arg_list);
 va_end(arg_list);
 return (print_all);
 }
-int _printf(const char *format, ...)
 {
     int print_all = 0;
     char buffer[1024];       // buffer local
@@ -59,10 +58,10 @@ int _printf(const char *format, ...)
         return (-1);
     va_start(arg_list, format);
 
-    // Appelle une version modifiée de recording_error qui prend buffer et buf_index
-    print_all = recording_error(format, f_list, arg_list, buffer, &buf_index);
+    /* Appelle une version modifiée de recording_error qui prend buffer et buf_index */
+    print_all = recording_error(format, f_list, arg_list);
 
-    // Écrire tout ce qui reste dans le buffer
+    /* Écrire tout ce qui reste dans le buffer */
     if (buf_index > 0)
         write(1, buffer, buf_index);
 
