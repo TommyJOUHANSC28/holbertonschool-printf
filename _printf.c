@@ -20,6 +20,9 @@ conver_t f_list[] = {
 {"u", unsigned_integer},
 {"b", print_binary},
 {"r", print_reversed},
+{"o", handle_octal},
+{"x", handle_hex},
+{"X", handle_HEX},
 {NULL, NULL}
 };
 va_list arg_list;
@@ -30,7 +33,3 @@ print_all = recording_error(format, f_list, arg_list);
 va_end(arg_list);
 return (print_all);
 }
-{'u', handle_unsigned},
-{'o', handle_octal},
-{'x', handle_hex},
-{'X', handle_HEX},
