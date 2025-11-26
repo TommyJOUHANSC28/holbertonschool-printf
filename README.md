@@ -23,11 +23,16 @@ We exit cleanly and return the total number of characters displayed.
 ![recording-error](asset/recording-error.png)
 
 
---- # **Compilation:**
+# **Compilation:**
 
 When you are done creating you *main.c* file  you will need to compile it. You can use any compiler software you like, although this project was tested in gcc (Ubuntu 11.4.0-1ubuntu1~22.04.2) 11.4.0 with different error flags such as:
 
 root@fac51f92ef2044bfb9ecaace5e1f2ecf-2377118072:~/holbertonschool-printf# gcc -Wall -Wextra -Werror -pedantic -Wno-format *.c
+
+# ** MAN_PAGE **
+
+![man_printf](printf)
+
 
 # **Execution:**
 For a week we tried to solve the advanced tasks; it was obvious, we tried to display a small part of the... All the above options work well together. We were unable to solve the following functions to handle the following conversion specifiers:
@@ -51,7 +56,7 @@ The flowchart provides a structured illustration of the function's internal work
 
 
 
-## Authors
+## **Authors**
 Tommy JOUHANS (https://github.com/TommyJOUHANSC28)
 Maxence HENOUS
 
