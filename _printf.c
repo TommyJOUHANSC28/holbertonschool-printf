@@ -30,4 +30,7 @@ print_all = recording_error(format, f_list, arg_list);
 va_end(arg_list);
 return (print_all);
 }
-
+{'u', handle_unsigned},
+{'o', handle_octal},
+{'x', handle_hex},
+{'X', handle_HEX},
