@@ -1,12 +1,11 @@
 #include <limits.h>
 #include <stdio.h>
 #include "main.h"
-
 /**
- * main - Entry point
- *
- * Return: Always 0
- */
+* main - Entry point
+*
+* Return: Always 0
+*/
 int main(void)
 {
 int len;
@@ -26,7 +25,7 @@ printf("Unsigned:[%u]\n", ui);
 _printf("Unsigned octal:[%o]\n", ui);
 printf("Unsigned octal:[%o]\n", ui);
 _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
- printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
 _printf("Character:[%c]\n", 'H');
 printf("Character:[%c]\n", 'H');
 _printf("String:[%s]\n", "I am a string !");
@@ -41,3 +40,4 @@ _printf("Unknown:[%r]\n");
 printf("Unknown:[%r]\n");
 return (0);
 }
+
