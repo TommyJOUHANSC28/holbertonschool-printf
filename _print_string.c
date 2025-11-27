@@ -6,7 +6,7 @@
  */
 int print_char(va_list list)
 {
-_write_char(va_arg(list, int));
+_putchar(va_arg(list, int));
 return (1);
 }
 /**
@@ -22,7 +22,8 @@ string = va_arg(list, char *);
 if (string == NULL)
 string = "(null)";
 for (index = 0; string[index] != '\0'; index++)
-_write_char(string[index]);
+_putchar(string[index]);
+free(string);
 return (index);
 }
 /**
@@ -32,7 +33,7 @@ return (index);
 */
 int print_percent(__attribute__((unused))va_list list)
 {
-_write_char('%');
+_putchar('%');
 return (1);
 }
 /**
@@ -54,8 +55,6 @@ return (length);
 int unsigned_integer(va_list list)
 {
 unsigned int num;
-num = va_arg(list, int);
-if (num == 0)
-return (print_unsgned_number(num));
+num = va_arg(list, unsigned int);
 return (print_unsgned_number(num));
 }

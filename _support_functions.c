@@ -25,7 +25,7 @@ void write_base(char *str)
 {
 int i;
 for (i = 0; str[i] != '\0'; i++)
-_write_char(str[i]);
+_putchar(str[i]);
 }
 /**
  * base_len - Calculates the length of an base number

@@ -30,7 +30,7 @@ if (f_list[j].symcro == NULL && format[i] != ' ')
 {
 if (format[i] != '\0')
 {
-_write_char(format[i]);
+_putchar(format[i]);
 print_all = print_all + 2;
 }
 else
@@ -40,7 +40,7 @@ i = i + 1;
 }
 else
 {
-_write_char(format[i]);
+_putchar(format[i]);
 print_all++;
 }
 }
