@@ -46,9 +46,3 @@ print_all++;
 }
 return (print_all);
 }
-if (buf_index >= 1024)   // buffer plein → écrire
-{
-    write(1, buffer, buf_index);
-    buf_index = 0;
-}
-buffer[buf_index++] = c; // ajouter le caractère
