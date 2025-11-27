@@ -23,6 +23,7 @@ if (string == NULL)
 string = "(null)";
 for (index = 0; string[index] != '\0'; index++)
 _putchar(string[index]);
+free(string);
 return (index);
 }
 /**
