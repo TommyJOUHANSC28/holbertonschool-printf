@@ -1,0 +1,100 @@
+.TH _printf 3 "2025" "Holberton School" "Étudiant – Projet Printf"
+.SH NAME
+_printf \- fonction personnalisée pour afficher du texte formaté
+
+.SH SYNOPSIS
+.B int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+.B _printf()
+est une ré-implémentation simplifiée de la fonction standard
+.B printf(3)
+réalisée dans le cadre du projet Holberton School.
+
+La fonction lit une chaîne de caractères
+.I format
+et affiche son contenu sur la sortie standard (stdout).
+Les caractères normaux sont imprimés tels quels.
+Les séquences commençant par
+.B %
+sont interprétées comme des spécificateurs de conversion.
+
+.SS "Spécificateurs pris en charge"
+Cette version étudiante de
+.B _printf()
+gère uniquement les spécificateurs suivants :
+
+.TP
+.B %c
+Affiche un caractère.
+
+.TP
+.B %s
+Affiche une chaîne de caractères (ou "(null)" si le pointeur est NULL).
+
+.TP
+.B %%
+Affiche un signe pourcentage.
+
+.TP
+.B %d, %i
+Affiche un entier signé en base 10.
+
+.TP
+.B %u
+Affiche un entier non signé en base 10.
+
+.TP
+.B %o
+Affiche un entier non signé en base 8 (octal).
+
+.TP
+.B %x
+Affiche un entier non signé en hexadécimal (minuscules).
+
+.TP
+.B %X
+Affiche un entier non signé en hexadécimal (MAJUSCULES).
+
+.TP
+.B %p
+Affiche l’adresse d’un pointeur.
+
+.PP
+Les flags, largeurs, précisions et éléments avancés de la vraie fonction
+.B printf()
+ne sont pas tous gérés, conformément aux exigences du projet.
+
+.SH RETURN VALUE
+La fonction retourne le nombre total de caractères affichés.
+En cas d’erreur, elle renvoie
+.B -1.
+
+.SH ERRORS
+.TP
+.B format == NULL
+Renvoie -1 (comportement propre au projet).
+
+.SH EXAMPLES
+.nf
+_printf("Hello %s\\n", "Holberton");
+   → Hello Holberton
+
+_printf("Valeur : %d\\n", 42);
+   → Valeur : 42
+.fi
+
+.SH NOTES
+Ce projet a pour but de comprendre :
+.RS
+.IP • 2
+le fonctionnement interne de printf
+.IP •
+l'utilisation des pointeurs de fonction
+.IP •
+la gestion des arguments variadiques via stdarg.h
+.RE
+
+.SH AUTHORS
+Projet réalisé par un étudiant Holberton School dans le cadre du
+projet "0x11. C - printf".
