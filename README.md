@@ -6,6 +6,7 @@ The `printf()` function displays the result on standard output (stdout), based o
 
 
 _printf.c:
+
 The format consists of two types of elements: the characters to be displayed on the screen,
 The prototype of this function is: int _printf(const char format, ...);
 This project is a very simple explanation of how the _printf function works:
@@ -13,8 +14,6 @@ We check if the text to be displayed (format) is empty.
 If so, we stop everything and return -1.
 We prepare the list of functions that can display each data type (%d, %s, %c, etc.).
 We exit cleanly and return the total number of characters displayed.
-
-![printf](asset/printf.c.png)
 
 
 
@@ -28,7 +27,10 @@ When we are done creating our *main.c* file  we will need to compile it. We can 
 
 # ** MAN_PAGE **
 
-![man-printf](printf)
+
+Hyperlinks from our printf man page:
+
+![man_printf](man-3-printf)
 
 
 # **Execution:**
@@ -47,11 +49,11 @@ For checking with  "Valgrind" to test if it has a memory leak:
 
 
 
-![flowchart](asset/flowchart-final-printf.png)
+![flowchart](asset/printf-flowchart.png)
 
 
 
 ## **Authors**
 Tommy JOUHANS (https://github.com/TommyJOUHANSC28)
-Maxence HENOUS
+Maxence HENOUS (https://github.com/maxence30)
 
