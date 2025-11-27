@@ -1,24 +1,28 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * main - test _printf pour tous les cas demandés
  *
  * Return: 0
  */
-int main(void)
+int main(void) 
 {
-    unsigned int u_val = 123;
-    unsigned int o_val = 123;
-    unsigned int x_val = 3055;
-    unsigned int X_val = 3055;
+    int len;
+    int len2;
 
-    _printf("Unsigned: %u\n", u_val);
-    _printf("Octal   : %o\n", o_val);
-    _printf("Hex     : %x\n", x_val);
-    _printf("HEX     : %X\n", X_val);
-
-    _printf("Mix     : u=%u, o=%o, x=%x, X=%X\n",
-            u_val, o_val, x_val, X_val);
-
-    return 0;
+    len = _printf("Let's try to printf a simple sentence.\n");
+    len2 = printf("Let's try to printf a simple sentence.\n");
+    _printf("Length:[%d, %i]\n", len, len);
+    printf("Length:[%d, %i]\n", len2, len2);
+    _printf("Negative:[%d]\n", -762534);
+    printf("Negative:[%d]\n", -762534);
+    _printf("Character:[%c]\n", 'H');
+    printf("Character:[%c]\n", 'H');
+    _printf("String:[%s]\n", "I am a string !");
+    printf("String:[%s]\n", "I am a string !");
+    len = _printf("Percent:[%%]\n");
+    len2 = printf("Percent:[%%]\n");
+    _printf("Len:[%d]\n", len);
+    printf("Len:[%d]\n", len2);
+    return (0);
 }
