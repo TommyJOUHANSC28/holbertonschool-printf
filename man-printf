@@ -28,13 +28,7 @@ The available convertion specifiers are:
 .br
 %u: Prints unsigned integers
 .br
-%x: Prints the hexadecial representation of an unsigned decimal in lowercase letters
-.br
-%X:Prints the hexadecial representation of an unsigned decimal in uppercase letters
-%r: Prints a reversed string
-.br
-%R: Prints the Rot13 interpretation of a string
-%%: Print a percent sign
+
 
 .SH LIMITATIONS
 The function does not handle flags, field width, precision,
@@ -80,9 +74,9 @@ November, 27th 2025
 
 .SH AUTHOR
 .IP
-Tommy JOUHANS(github: TommyJOUHANSC28), Holberton School from Dijon, in FRANCE.
+Tommy JOUHANS (github: TommyJOUHANSC28), Holberton School from Dijon, in FRANCE.
 .IP
-Maxence HENOUS Holberton School from Dijon, in FRANCE.
+Maxence HENOUS (github: maxence30), Holberton School from Dijon, in FRANCE.
 .br
 .SH SEE ALSO
 print(3)
