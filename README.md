@@ -61,5 +61,6 @@ For checking with  "Valgrind" to test if it has a memory leak:
 
 ## **Authors**
 Tommy JOUHANS (https://github.com/TommyJOUHANSC28)
+
 Maxence HENOUS (https://github.com/maxence30)
 
