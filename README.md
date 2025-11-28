@@ -30,7 +30,7 @@ When we are done creating our *main.c* file  we will need to compile it. We can 
 
 Hyperlinks from our printf man page:
 
-![man_3_printf](man-3-printf)
+![man_3_printf](man_3_printf)
 
 
 # **Execution:**
