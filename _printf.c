@@ -48,7 +48,7 @@ int _printf(const char *format, ...)
             else if (format[i] == 'd' || format[i] == 'i')
             {
                 int n = va_arg(args, int);
-                char buf[12]; /* assez pour int */
+                char buf[20]; 
                 int len = 0;
 
                 if (n < 0)
@@ -80,3 +80,4 @@ int _printf(const char *format, ...)
     va_end(args);
     return (counter);
 }
+
