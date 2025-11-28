@@ -1,15 +1,15 @@
-TH PRINTF
+PRINTF
 .SH NAME
-.B _printf - function that produces output according to a format
 
-.SH SYNOPSIS
-
+.br
+.TH SYNOPSIS
+.br
 .B #include "main.h"
 .br
 .B int _printf(const char *format, ...);
-
-.SH DESCRIPTION
-
+.br
+.TH DESCRIPTION
+.br
 - _printf() function produces output according to the format. 
 It uses a specific function according to receipt format in order to display the result in the correct format.
 It writes the output to the standard output (stdout).
@@ -30,53 +30,68 @@ The available convertion specifiers are:
 .br
 
 
-.SH LIMITATIONS
+.TH LIMITATIONS
 The function does not handle flags, field width, precision,
 length modifiers or buffer handling.
 
-.SH RETURN
+.TH RETURN
 If successful, these functions return the number of characters printed (excluding the null byte).
 If the null return is unsuccessful, -1 is returned.
 
 
-.SH EXAMPLE
+.TH EXAMPLE
 .IP
+.br
 A hand to display the numbers (integers):
+.br
 .IP
 #include <limits.h>
+.br
 .IP
 #include <stdio.h>
+.br
 .IP
 #include "main.h"
+.br
 .IP
 int main(void)
+.br
 .IP
 {
+.br
 .IP
 _printf("Length:[%d, %i]\n", len, len);
+.br
 .IP
 }
 .br
 .IP
 root@f52c0d026c3049d68081893eaf522e3b-2377118072:~/holbertonschool-printf# gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c
+.br
 .IP
 root@f52c0d026c3049d68081893eaf522e3b-2377118072:~/holbertonschool-printf# ./a.out
+.br
 .IP
 Length:[39, 39]
 .br
 
-.SH BUGS
+.TH BUGS
 No detected so far. Please report any to 12119@holbertonstudents.com
+.br
 .IP
-.SH DATE
+
+.TH DATE
 November, 27th 2025
 .br
 
-.SH AUTHOR
+.TH AUTHOR
+.br
 .IP
 Tommy JOUHANS (github: TommyJOUHANSC28), Holberton School from Dijon, in FRANCE.
+.br
 .IP
 Maxence HENOUS (github: maxence30), Holberton School from Dijon, in FRANCE.
 .br
-.SH SEE ALSO
+.TH SEE ALSO
+.br
 print(3)
