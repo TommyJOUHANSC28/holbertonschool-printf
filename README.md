@@ -7,7 +7,7 @@ The `printf()` function displays the result on standard output (stdout), based o
 
 _printf.c:
 
-The format consists of two types of elements: the characters to be displayed on the screen.
+The format consists of two types of elements: characters and '%' the characters to be displayed on the screen.
 
 The prototype of this function is: int _printf(const char format, ...).
 
